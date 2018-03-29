@@ -1,0 +1,13 @@
+{
+  "name": "Sparkline",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-native": "^0.54.x",
+    "react-native-sparkline": "git+https://github.com/fanqfanh/react-native-sparkline.git"
+  }
+}

@@ -4,18 +4,16 @@
 [![code style: standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
+## Prerequisite
+
+Enable ART on iOS
+
 ## Usage
 
 * Install
 
 ```bash
 npm i react-native-sparkline
-```
-
-* Link with react-native
-
-```bash
-react-native link react-native-sparkline
 ```
 
 * Enjoy it

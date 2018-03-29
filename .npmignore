@@ -1,0 +1,7 @@
+.npmignore
+.editorconfig
+.gitignore
+
+__tests__/
+
+example/

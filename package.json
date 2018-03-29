@@ -1,0 +1,76 @@
+{
+  "name": "react-native-sparkline",
+  "version": "1.0.0-alpha",
+  "description": "Sparkline component for react-native",
+  "main": "src/index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "prettier --write '**/*.{js,ts,md}'; standard --fix",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{ts,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --write",
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    },
+    "plugins": [
+      "flowtype"
+    ],
+    "parser": "babel-eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanqfanh/react-native-sparkline.git"
+  },
+  "keywords": [
+    "react-native",
+    "sparkline",
+    "chart",
+    "ART"
+  ],
+  "author": "Fanqh Team",
+  "license": "MIT",
+  "homepage": "https://github.com/fanqfanh/react-native-sparkline#readme",
+  "bugs": {
+    "url": "https://github.com/fanqfanh/react-native-sparkline/issues"
+  },
+  "peerDependencies": {
+    "react-native": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.x",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "flow-bin": "^0.65.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "react": "^16.2.0",
+    "react-native": "^0.54.x",
+    "react-test-renderer": "^16.2.0",
+    "standard": "^11.0.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "react-native-sparkline",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-beta",
   "description": "Sparkline component for react-native",
   "main": "src/index.js",
   "scripts": {
@@ -49,8 +49,8 @@
     "url": "https://github.com/fanqfanh/react-native-sparkline/issues"
   },
   "peerDependencies": {
-    "react-native": "*",
-    "react": "*"
+    "react": "*",
+    "react-native": "*"
   },
   "devDependencies": {
     "babel-eslint": "^8.x",

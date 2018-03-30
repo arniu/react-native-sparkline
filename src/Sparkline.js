@@ -10,7 +10,7 @@ import * as typed from './typed'
 
 type Props = typed.GraphProps
 
-const makeContext = ({
+const createHelpers = ({
   data,
   width,
   height,
@@ -38,18 +38,12 @@ const makeContext = ({
   return {
     scaleX,
     scaleY,
-    points,
-    width,
-    height,
-    padding,
-    data,
-    max,
-    min
+    points
   }
 }
 
-const Sparkline = (props: Props) => {
-  const context = makeContext(props)
+const Sparkline = ({ children, ...props }: Props) => {
+  const drawHelpers = createHelpers(props)
 
   return (
     // prettier-ignore
@@ -58,11 +52,11 @@ const Sparkline = (props: Props) => {
       height={props.height}
       style={props.style}
     >
-      {React.Children.map(props.children, child =>
+      {React.Children.map(children, child =>
         React.cloneElement(child, {
-          ...helper.filterProps(props),
-          ...helper.filterProps(child.props),
-          ...context
+          ...props,
+          ...child.props,
+          ...drawHelpers
         })
       )}
     </ART.Surface>

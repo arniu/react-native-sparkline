@@ -11,9 +11,9 @@ type Props = typed.ShareProps & {
   where: number | 'max' | 'min' | 'mean' | 'median' | 'stdev'
 }
 
-const makeGuide = ({ data, where, scaleY, margin, width }: Props) => {
+const makeGuide = ({ data, where, scaleY, padding, width }: Props) => {
   const level = typeof where !== 'number' ? helper[where](data) : where
-  return `M${margin} ${scaleY(level)} H${width - margin}`
+  return `M${padding} ${scaleY(level)} H${width - padding}`
 }
 
 const Guide = ({ color, stroke, strokeWidth, ...props }: Props) => (

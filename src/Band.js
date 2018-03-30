@@ -10,7 +10,15 @@ import * as typed from './typed'
 
 type Props = typed.ShareProps
 
-const Band = ({ data, scaleY, margin, width, color, fill, opacity }: Props) => {
+const Band = ({
+  data,
+  scaleY,
+  padding,
+  width,
+  color,
+  fill,
+  opacity
+}: Props) => {
   const max = helper.max(data)
   const min = helper.min(data)
   const half = (max - min) / 2
@@ -21,9 +29,9 @@ const Band = ({ data, scaleY, margin, width, color, fill, opacity }: Props) => {
       fill={fill || color}
       opacity={opacity}
       d={makeRect({
-        x: margin,
+        x: padding,
         y: scaleY(high),
-        width: width - 2 * margin,
+        width: width - 2 * padding,
         height: scaleY(half)
       })}
     />

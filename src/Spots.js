@@ -5,15 +5,17 @@
 import * as React from 'react'
 import { ART } from 'react-native'
 import { makeCircle } from './shape'
+import * as helper from './helper'
 import * as typed from './typed'
 
 type Props = typed.ShareProps
 
-const Spots = ({ points, color, stroke, strokeWidth }: Props) => (
+const Spots = ({ color, stroke, strokeWidth, ...props }: Props) => (
   <ART.Shape
     stroke={stroke || color}
     strokeWidth={strokeWidth}
-    d={points
+    d={helper
+      .sample(props.points, props.sampling)
       .map(({ x, y }) =>
         makeCircle({
           cx: x,

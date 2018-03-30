@@ -15,10 +15,8 @@ export type GraphProps = {
   sampling?: number,
   limit?: number,
   max?: number,
-  min?: number
-}
+  min?: number,
 
-export type GraphStyle = {
   color?: string,
   stroke?: string,
   strokeWidth?: number,
@@ -26,8 +24,10 @@ export type GraphStyle = {
   fill?: string
 }
 
-export type ShareProps = {
+export type DrawHelpers = {
   scaleX: number => number,
   scaleY: number => number,
   points: Point[]
-} & GraphProps
+}
+
+export type ShareProps = GraphProps & DrawHelpers

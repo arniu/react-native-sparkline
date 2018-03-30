@@ -61,11 +61,32 @@ export function stdev (xs: number[]): number {
   return nonEmpty(xs) ? Math.sqrt(devSum(xs) / (xs.length - 1)) : 0
 }
 
-// https://github.com/react-native-china/react-native-ART-doc/blob/master/doc.md#shape
-const shapePropNames = [
-  'color', // fallback color
-  'width', // maybe we should drop it
+/**
+ * Sample Data
+ *
+ * @param {Array.<number>} xs
+ * @param {number} sampling
+ * @return {number}
+ */
+export function sample<T> (xs: T[], sampling: number): T[] {
+  const band = (sampling > 1 ? xs.length : 1) / sampling
+  const step = Math.round(Math.min(band, xs.length / 2))
+
+  let cursor = -1
+  return xs.filter((x, i) => {
+    if (i > cursor) {
+      cursor += step
+    }
+
+    return i === cursor
+  })
+}
+
+const acceptedProps = [
+  'sampling', // sampling rate
   'height', // maybe we should drop it
+  'width', // maybe we should drop it
+  'color', // fallback color
   'stroke',
   'strokeWidth',
   'strokeDash',
@@ -81,8 +102,8 @@ const shapePropNames = [
  * @param {{[string]:any}} props
  * @return {{[string]:any}}
  */
-export function pickShape (props: Object): Object {
-  return shapePropNames.reduce((obj, key) => {
+export function filterProps (props: Object): Object {
+  return acceptedProps.reduce((obj, key) => {
     if (key in props) {
       obj[key] = props[key]
     }

@@ -60,8 +60,8 @@ const Sparkline = (props: Props) => {
     >
       {React.Children.map(props.children, child =>
         React.cloneElement(child, {
-          ...helper.pickShape(props),
-          ...helper.pickShape(child.props),
+          ...helper.filterProps(props),
+          ...helper.filterProps(child.props),
           ...context
         })
       )}
@@ -75,7 +75,8 @@ Sparkline.defaultProps = {
   opacity: 0.1,
   width: 240,
   height: 60,
-  padding: 4
+  padding: 4,
+  sampling: 8
 }
 
 export default Sparkline

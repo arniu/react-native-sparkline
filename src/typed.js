@@ -12,6 +12,7 @@ export type GraphProps = {
   width?: number,
   height?: number,
   padding?: number,
+  sampling?: number,
   limit?: number,
   max?: number,
   min?: number

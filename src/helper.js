@@ -81,33 +81,3 @@ export function sample<T> (xs: T[], sampling: number): T[] {
     return i === cursor
   })
 }
-
-const acceptedProps = [
-  'sampling', // sampling rate
-  'height', // maybe we should drop it
-  'width', // maybe we should drop it
-  'color', // fallback color
-  'stroke',
-  'strokeWidth',
-  'strokeDash',
-  'strokeCap',
-  'strokeJoin',
-  'opacity',
-  'fill'
-]
-
-/**
- * Pick shape style
- *
- * @param {{[string]:any}} props
- * @return {{[string]:any}}
- */
-export function filterProps (props: Object): Object {
-  return acceptedProps.reduce((obj, key) => {
-    if (key in props) {
-      obj[key] = props[key]
-    }
-
-    return obj
-  }, {})
-}

@@ -10,33 +10,24 @@ import * as typed from './typed'
 
 type Props = typed.GraphProps
 
-const defaultProps = {
-  color: '#48d',
-  strokeWidth: 1,
-  opacity: 0.1,
-  width: 240,
-  height: 60,
-  margin: 4
-}
-
 const makeContext = ({
   data,
   width,
   height,
-  margin,
+  padding,
   max = helper.max(data),
   min = helper.min(data)
 }: Props) => {
   // prettier-ignore
   const scaleX = createScale(
     [0, data.length - 1],
-    [margin, width - margin]
+    [padding, width - padding]
   )
 
   // prettier-ignore
   const scaleY = createScale(
     [min, max],
-    [height - margin, margin]
+    [height - padding, padding]
   )
 
   const points = data.map((d, i) => ({
@@ -50,7 +41,7 @@ const makeContext = ({
     points,
     width,
     height,
-    margin,
+    padding,
     data,
     max,
     min
@@ -78,6 +69,13 @@ const Sparkline = (props: Props) => {
   )
 }
 
-Sparkline.defaultProps = defaultProps
+Sparkline.defaultProps = {
+  color: '#48d',
+  strokeWidth: 1,
+  opacity: 0.1,
+  width: 240,
+  height: 60,
+  padding: 4
+}
 
 export default Sparkline

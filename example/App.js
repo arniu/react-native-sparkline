@@ -8,23 +8,23 @@ const data = Array.from({ length: 20 }).map(
 
 export default () => (
   <View style={styles.container}>
-    <Sparkline style={styles.sparkline} data={data}>
+    <Sparkline style={styles.graph} data={data}>
       <Sparkline.Line />
       <Sparkline.Fill />
       <Sparkline.Spots color='red' />
     </Sparkline>
 
-    <Sparkline style={styles.sparkline} data={data}>
+    <Sparkline style={styles.graph} data={data}>
       <Sparkline.Line />
       <Sparkline.Fill />
     </Sparkline>
 
-    <Sparkline style={styles.sparkline} data={data}>
+    <Sparkline style={styles.graph} data={data}>
       <Sparkline.Line />
       <Sparkline.Band />
     </Sparkline>
 
-    <Sparkline style={styles.sparkline} data={data}>
+    <Sparkline style={styles.graph} data={data}>
       <Sparkline.Line />
       <Sparkline.Band />
       <Sparkline.Guide color='red' />
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
-  sparkline: {
+  graph: {
     margin: 10
   }
 })

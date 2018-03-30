@@ -11,7 +11,7 @@ export type GraphProps = {
   data: number[],
   width?: number,
   height?: number,
-  margin?: number,
+  padding?: number,
   limit?: number,
   max?: number,
   min?: number

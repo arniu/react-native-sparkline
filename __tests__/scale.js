@@ -5,22 +5,22 @@ import * as helper from '../src/helper'
 
 const width = 240
 const height = 60
-const margin = 4
+const padding = 4
 const data = [3, 1, 4]
 
 describe('scaleX', () => {
   // prettier-ignore
   const scaleX = createScale(
     [0, data.length - 1],
-    [margin, width - margin]
+    [padding, width - padding]
   )
 
   it('x0 => y0', () => {
-    expect(scaleX(0)).toBe(margin)
+    expect(scaleX(0)).toBe(padding)
   })
 
   it('x1 => y1', () => {
-    expect(scaleX(data.length - 1)).toBe(width - margin)
+    expect(scaleX(data.length - 1)).toBe(width - padding)
   })
 
   it('middle => center', () => {
@@ -36,15 +36,15 @@ describe('scaleY', () => {
   // prettier-ignore
   const scaleY = createScale(
     [min, max],
-    [height - margin, margin]
+    [height - padding, padding]
   )
 
   it('x0 => y0', () => {
-    expect(scaleY(min)).toBe(height - margin)
+    expect(scaleY(min)).toBe(height - padding)
   })
 
   it('x1 => y1', () => {
-    expect(scaleY(max)).toBe(margin)
+    expect(scaleY(max)).toBe(padding)
   })
 
   it('middle => center', () => {

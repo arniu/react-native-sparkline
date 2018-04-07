@@ -9,14 +9,19 @@ import * as typed from './typed'
 
 type Props = typed.ShareProps
 
-const Fill = ({ points, height, padding, color, fill, opacity }: Props) => {
+const makeFill = ({ points, height, padding }: Props) => {
   const last = points[points.length - 1]
-  const path = makeLine(points)
-    .lineTo(last.x, height - padding)
-    .lineTo(padding, height - padding)
-    .close()
-
-  return <ART.Shape fill={fill || color} opacity={opacity} d={path} />
+  return (
+    last &&
+    makeLine(points)
+      .lineTo(last.x, height - padding)
+      .lineTo(padding, height - padding)
+      .close()
+  )
 }
+
+const Fill = ({ color, fill, opacity, ...props }: Props) => (
+  <ART.Shape fill={fill || color} opacity={opacity} d={makeFill(props)} />
+)
 
 export default Fill

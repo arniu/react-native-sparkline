@@ -43,7 +43,7 @@ const createHelpers = ({
 }
 
 const Sparkline = ({ children, ...props }: Props) => {
-  const drawHelpers = createHelpers(props)
+  const helpers = createHelpers(props)
 
   return (
     // prettier-ignore
@@ -56,7 +56,7 @@ const Sparkline = ({ children, ...props }: Props) => {
         React.cloneElement(child, {
           ...props,
           ...child.props,
-          ...drawHelpers
+          ...helpers
         })
       )}
     </ART.Surface>

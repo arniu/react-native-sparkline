@@ -36,6 +36,14 @@ const App = () => (
 )
 ```
 
+##Screenshots
+
+**iPhone8**
+![iPhone screenshot](/example/iPhone8.png?raw=true)
+
+**Nexus7**
+![Android screenshot](/example/Nexus7.png?raw=true)
+
 ## License
 
 [MIT](./LICENSE)

@@ -36,7 +36,7 @@ const App = () => (
 )
 ```
 
-##Screenshots
+## Screenshots
 
 **iPhone8**
 ![iPhone screenshot](/example/iPhone8.png?raw=true)

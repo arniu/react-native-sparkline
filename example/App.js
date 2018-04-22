@@ -1,34 +1,62 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import Sparkline from 'react-native-sparkline'
 
 const data = Array.from({ length: 20 }).map(
-  (noValue, i) => i + (i + 1) * Math.random()
+  (unused, i) => i + (i + 1) * Math.random()
 )
+
+const props = {
+  data,
+  style: {
+    margin: 10
+  }
+}
 
 export default () => (
   <View style={styles.container}>
-    <Sparkline style={styles.graph} data={data}>
+    <Sparkline {...props}>
+      <Sparkline.Line />
+    </Sparkline>
+
+    <Text>Line</Text>
+
+    <Sparkline {...props}>
+      <Sparkline.Fill />
+    </Sparkline>
+
+    <Text>Fill</Text>
+
+    <Sparkline {...props}>
+      <Sparkline.Line />
+      <Sparkline.Fill />
+    </Sparkline>
+
+    <Text>Line + Fill</Text>
+
+    <Sparkline {...props}>
       <Sparkline.Line />
       <Sparkline.Fill />
       <Sparkline.Spots color='red' />
     </Sparkline>
 
-    <Sparkline style={styles.graph} data={data}>
-      <Sparkline.Line />
-      <Sparkline.Fill />
-    </Sparkline>
+    <Text>with Spots</Text>
 
-    <Sparkline style={styles.graph} data={data}>
+    <Sparkline {...props}>
       <Sparkline.Line />
       <Sparkline.Band />
     </Sparkline>
 
-    <Sparkline style={styles.graph} data={data}>
+    <Text>Line + Band</Text>
+
+    <Sparkline {...props}>
       <Sparkline.Line />
       <Sparkline.Band />
-      <Sparkline.Guide color='red' />
+      <Sparkline.Guide where='max' />
+      <Sparkline.Guide where='min' />
     </Sparkline>
+
+    <Text>with Guide</Text>
   </View>
 )
 
@@ -37,9 +65,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
-  },
-
-  graph: {
-    margin: 10
   }
 })

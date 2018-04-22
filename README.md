@@ -4,9 +4,16 @@
 [![code style: standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
+![example screenshot](/example/screenshot.png)
+
 ## Prerequisite
 
-Enable ART on iOS
+This library is based on [ART](art-library) and works on both Android and iOS platform.
+
+[ART](art-library) has already been included in react-native, while not avaiable on iOS. Please follow the [document](manual-linking) to **link ART on iOS manually**.
+
+[art-library]: https://github.com/facebook/react-native/tree/master/Libraries/ART
+[manual-linking]: https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking
 
 ## Usage
 
@@ -16,14 +23,14 @@ Enable ART on iOS
 npm i react-native-sparkline
 ```
 
-* Enjoy it
+* Use it
 
 ```jsx harmony
 import React from 'react'
 import Sparkline from 'react-native-sparkline'
 
 const data = Array.from({ length: 20 }).map(
-  (noValue, i) => i + (i + 1) * Math.random()
+  (unused, i) => i + (i + 1) * Math.random()
 )
 
 const App = () => (
@@ -36,15 +43,11 @@ const App = () => (
 )
 ```
 
-## Screenshots
+## Example
 
-**iPhone8**
-
-![iPhone screenshot](/example/iPhone8.png?raw=true)
-
-**Nexus7**
-
-![Android screenshot](/example/Nexus7.png?raw=true)
+1.  `cd example`
+2.  `npm install`
+3.  `react-native run-ios` or `react-native run-android`
 
 ## License
 

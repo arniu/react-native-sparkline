@@ -8,9 +8,9 @@
 
 ## Prerequisite
 
-This library is based on [ART](art-library) and works on both Android and iOS platform.
+This library is based on [ART][art-library] and works on both Android and iOS platform.
 
-[ART](art-library) has already been included in react-native, while not avaiable on iOS. Please follow the [document](manual-linking) to **link ART on iOS manually**.
+[ART][art-library] has already been included in react-native, while not avaiable on iOS. Please follow the [document][manual-linking] to **link ART on iOS manually**.
 
 [art-library]: https://github.com/facebook/react-native/tree/master/Libraries/ART
 [manual-linking]: https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking

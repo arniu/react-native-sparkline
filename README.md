@@ -4,6 +4,8 @@
 [![code style: standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
+An ART-based sparkline component for react-native
+
 ![example screenshot](/example/screenshot.png)
 
 ## Prerequisite

@@ -1,7 +1,7 @@
 {
   "name": "react-native-sparkline",
   "version": "1.0.4-beta",
-  "description": "Sparkline component for react-native",
+  "description": "An ART-based sparkline component for react-native",
   "main": "src/index.js",
   "scripts": {
     "precommit": "lint-staged",

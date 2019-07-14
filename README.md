@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/react-native-sparkline.svg)](https://www.npmjs.com/package/react-native-sparkline)
 [![code style: standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/) [![Greenkeeper badge](https://badges.greenkeeper.io/arniu/react-native-sparkline.svg)](https://greenkeeper.io/)
 
 An ART-based sparkline component for react-native
 

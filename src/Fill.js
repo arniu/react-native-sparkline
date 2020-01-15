@@ -3,7 +3,8 @@
  */
 
 import * as React from 'react'
-import { ART } from 'react-native'
+import ART from './ART'
+
 import { makeLine } from './shape'
 import * as typed from './typed'
 

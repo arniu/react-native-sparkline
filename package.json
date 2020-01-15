@@ -72,5 +72,8 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules"
     ]
+  },
+  "dependencies": {
+    "@react-native-community/art": "^1.1.2"
   }
 }

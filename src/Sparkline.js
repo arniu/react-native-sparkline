@@ -3,7 +3,8 @@
  */
 
 import * as React from 'react'
-import { ART } from 'react-native'
+import ART from './ART'
+
 import createScale from './scale'
 import * as helper from './helper'
 import * as typed from './typed'

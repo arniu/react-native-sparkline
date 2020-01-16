@@ -2,7 +2,8 @@
  * @flow
  */
 
-import { ART } from 'react-native'
+import ART from './ART'
+
 import * as typed from './typed'
 
 type CircleProps = {

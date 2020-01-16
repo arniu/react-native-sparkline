@@ -12,20 +12,28 @@ An ART-based sparkline component for react-native
 
 This library is based on [ART][art-library] and works on both Android and iOS platform.
 
-[ART][art-library] has already been included in react-native, while not avaiable on iOS. Please follow the [document][manual-linking] to **link ART on iOS manually**.
+## Linking module
 
-[art-library]: https://github.com/facebook/react-native/tree/master/Libraries/ART
+For `react-native >= 0.60` ReactNativeART should be auto-linked and no additional action is required.
+
+For `react-native < 0.60` you need to link ReactNative ART:
+
+```
+react-native link @react-native-community/art
+```
+
+Manual:
 [manual-linking]: https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking
 
 ## Usage
 
-* Install
+- Install
 
 ```bash
 npm i react-native-sparkline
 ```
 
-* Use it
+- Use it
 
 ```jsx harmony
 import React from 'react'

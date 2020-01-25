@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fanqfanh/react-native-sparkline.git"
+    "url": "git+https://github.com/arniu/react-native-sparkline.git"
   },
   "keywords": [
     "react-native",
@@ -42,11 +42,11 @@
     "chart",
     "ART"
   ],
-  "author": "Fanqh Team",
+  "author": "Arniu Tseng",
   "license": "MIT",
-  "homepage": "https://github.com/fanqfanh/react-native-sparkline#readme",
+  "homepage": "https://github.com/arniu/react-native-sparkline#readme",
   "bugs": {
-    "url": "https://github.com/fanqfanh/react-native-sparkline/issues"
+    "url": "https://github.com/arniu/react-native-sparkline/issues"
   },
   "peerDependencies": {
     "react": "*",
